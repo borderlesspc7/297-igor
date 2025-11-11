@@ -1,9 +1,11 @@
+import AppRoutes from "./routes/AppRoutes";
+import { AuthProvider } from "./contexts/AuthContext";
+
 function App() {
   return (
-    <main>
-      <h1>Bem-vindo</h1>
-      <p>Este projeto está pronto para receber sua aplicação React.</p>
-    </main>
+    <AuthProvider>
+      <AppRoutes />
+    </AuthProvider>
   );
 }
 
