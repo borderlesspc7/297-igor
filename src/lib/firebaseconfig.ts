@@ -3,12 +3,12 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAnPTDbFVZA9o0rUZi8MdrrFkybwb7Kjqo23",
-  authDomain: "goldcury-24db923.firebaseapp.com",
-  projectId: "goldcury-24db923",
-  storageBucket: "goldcury-24db9.firebasestorage.app23",
-  messagingSenderId: "87207212173323",
-  appId: "1:872072121733:web:9db7270d4c2a3b951408e23",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
 const app = initializeApp(firebaseConfig);
