@@ -42,7 +42,7 @@ export default function Register() {
 
     try {
       await register(credentials);
-      navigate("/menu");
+      navigate("/dashboard");
     } catch (err) {
       setError(err instanceof Error ? err.message : "Erro ao criar conta");
     } finally {

@@ -8,6 +8,7 @@ import {
   X,
 } from "lucide-react";
 import { NavLink } from "react-router-dom";
+import { paths } from "../../routes/path";
 import "./Sidebar.css";
 
 export type SidebarLink = {
@@ -26,37 +27,37 @@ type SidebarProps = {
 const defaultLinks: SidebarLink[] = [
   {
     label: "Dashboard",
-    to: "/menu",
+    to: paths.dashboard,
     icon: Gauge,
   },
   {
     label: "Gestão de números",
-    to: "/numeros",
+    to: paths.gestaoDeNumeros,
     icon: PhoneCall,
   },
   {
     label: "Gestão de usuários",
-    to: "/usuarios",
+    to: paths.gestaoDeUsuarios,
     icon: Users,
   },
   {
     label: "Plano de aquecimento",
-    to: "/plano-aquecimento",
+    to: paths.planoDeAquecimento,
     icon: Thermometer,
   },
   {
     label: "Interações",
-    to: "/interacoes",
+    to: paths.interacoes,
     icon: MessageSquare,
   },
   {
     label: "Grupos",
-    to: "/grupos",
+    to: paths.grupos,
     icon: Users,
   },
   {
     label: "Relatórios",
-    to: "/relatorios",
+    to: paths.relatorios,
     icon: FileText,
   },
 ];

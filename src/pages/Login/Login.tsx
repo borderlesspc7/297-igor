@@ -23,7 +23,7 @@ export default function Login() {
 
     try {
       await login(credentials);
-      navigate("/menu");
+      navigate("/dashboard");
     } catch (err) {
       setError(err instanceof Error ? err.message : "Erro ao fazer login");
     } finally {
