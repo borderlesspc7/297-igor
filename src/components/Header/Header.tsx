@@ -37,7 +37,7 @@ export function Header({ onToggleSidebar, actions = [] }: HeaderProps) {
           className="sidebar-toggle"
           onClick={onToggleSidebar}
           type="button"
-          aria-label="TAlternar menu lateral"
+          aria-label="Alternar menu lateral"
         >
           <Menu size={22} />
         </button>
