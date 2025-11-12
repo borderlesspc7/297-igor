@@ -3,12 +3,8 @@ import { paths } from "./path";
 import ProtectedRoutes from "./ProtectedRoutes";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
-
+import MenuPage from "../pages/Menu/Menu";
 export default function AppRoutes() {
-  const Menu = () => {
-    return <h1>Menu</h1>;
-  };
-
   return (
     <BrowserRouter>
       <Routes>
@@ -19,7 +15,7 @@ export default function AppRoutes() {
           path={paths.menu}
           element={
             <ProtectedRoutes>
-              <Menu />
+              <MenuPage />
             </ProtectedRoutes>
           }
         />

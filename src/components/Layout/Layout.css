@@ -1,0 +1,67 @@
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background: #0f172a;
+  color: #e2e8f0;
+  overflow: hidden;
+}
+
+.app-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.content-area {
+  flex: 1;
+  padding: 2rem;
+  min-height: calc(100vh - 72px);
+  overflow-y: auto;
+  background: radial-gradient(
+      circle at top left,
+      rgba(56, 189, 248, 0.06),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(16, 185, 129, 0.05),
+      transparent 50%
+    ),
+    #0f172a;
+  backdrop-filter: blur(6px);
+}
+
+.ghost-button {
+  background: rgba(148, 163, 184, 0.1);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  color: #94a3b8;
+  padding: 0.25rem 0.7rem;
+  border-radius: 0.65rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ghost-button:hover {
+  color: #22d3ee;
+  border-color: rgba(34, 211, 238, 0.35);
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.12);
+}
+
+@media (max-width: 1024px) {
+  .app-shell {
+    position: relative;
+  }
+
+  .app-content {
+    width: 100%;
+  }
+
+  .content-area {
+    padding: 1.5rem;
+  }
+}
