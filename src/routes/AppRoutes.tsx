@@ -3,8 +3,8 @@ import { paths } from "./path";
 import ProtectedRoutes from "./ProtectedRoutes";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
-import MenuPage from "../pages/Menu/Menu";
 import { Layout } from "../components/Layout/Layout";
+import Dashboard from "../pages/Dashboard/Dashboard";
 
 export default function AppRoutes() {
   const GestaoDeNumeros = () => {
@@ -65,7 +65,7 @@ export default function AppRoutes() {
           path={paths.dashboard}
           element={
             <ProtectedRoutes>
-              <MenuPage />
+              <Dashboard />
             </ProtectedRoutes>
           }
         />

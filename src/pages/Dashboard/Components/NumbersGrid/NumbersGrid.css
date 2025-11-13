@@ -1,0 +1,195 @@
+.numbers-grid {
+  padding: 1.5rem;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 1rem;
+  box-shadow: 0 18px 32px -24px rgba(15, 23, 42, 0.9);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.numbers-grid-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.numbers-grid-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #f1f5f9;
+}
+
+.numbers-grid-header p {
+  margin: 0.35rem 0 0;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.numbers-grid-manual {
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+  padding: 0.6rem 1.1rem;
+  border-radius: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.numbers-grid-manual:hover {
+  border-color: rgba(56, 189, 248, 0.55);
+  box-shadow: 0 10px 20px -12px rgba(56, 189, 248, 0.45);
+  transform: translateY(-1px);
+}
+
+.numbers-grid-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.number-card {
+  background: rgba(17, 24, 39, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 0.9rem;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: all 0.2s ease;
+}
+
+.number-card:hover {
+  border-color: rgba(16, 185, 129, 0.25);
+  box-shadow: 0 16px 24px -20px rgba(16, 185, 129, 0.45);
+}
+
+.number-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.number-card-header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 1rem;
+  object-fit: cover;
+  border: 2px solid rgba(148, 163, 184, 0.2);
+}
+
+.number-card-header strong {
+  display: block;
+  color: #f1f5f9;
+  font-size: 1rem;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  margin-top: 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.status-badge.pronto {
+  background: rgba(16, 185, 129, 0.18);
+  color: #10b981;
+}
+
+.status-badge.aquecendo {
+  background: rgba(234, 179, 8, 0.18);
+  color: #eab308;
+}
+
+.status-badge.pausado {
+  background: rgba(248, 113, 113, 0.18);
+  color: #f87171;
+}
+
+.number-card-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.progress-bar {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(99, 102, 241, 0.15);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.progress-fill.pronto {
+  background: linear-gradient(90deg, #10b981, #34d399);
+}
+
+.progress-fill.aquecendo {
+  background: linear-gradient(90deg, #eab308, #facc15);
+}
+
+.progress-fill.pausado {
+  background: linear-gradient(90deg, #f87171, #fda4af);
+}
+
+.number-card-progress span {
+  color: #cbd5f5;
+  font-size: 0.85rem;
+}
+
+.number-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.number-card-meta small {
+  display: block;
+  color: #64748b;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.number-card-meta strong {
+  color: #e2e8f0;
+  font-size: 0.9rem;
+}
+
+.number-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.number-card-actions button {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  background: rgba(148, 163, 184, 0.1);
+  color: #cbd5f5;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.number-card-actions button:hover {
+  color: #0ea5e9;
+  border-color: rgba(14, 165, 233, 0.4);
+  box-shadow: 0 10px 20px -14px rgba(14, 165, 233, 0.45);
+}

@@ -1,0 +1,83 @@
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.summary-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.summary-card:hover {
+  border-color: rgba(16, 185, 129, 0.25);
+  box-shadow: 0 12px 24px -18px rgba(16, 185, 129, 0.4);
+}
+
+.summary-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 0.875rem;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.summary-card-icon.total {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+}
+
+.summary-card-icon.heating {
+  background: rgba(251, 146, 60, 0.15);
+  color: #fb923c;
+}
+
+.summary-card-icon.ready {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+}
+
+.summary-card-icon.messages {
+  background: rgba(168, 85, 247, 0.15);
+  color: #a855f7;
+}
+
+.summary-card-icon.rate {
+  background: rgba(34, 211, 238, 0.15);
+  color: #22d3ee;
+}
+
+.summary-card-icon.alert {
+  background: rgba(248, 113, 113, 0.15);
+  color: #f87171;
+}
+
+.summary-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.summary-card-label {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.summary-card-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #f1f5f9;
+}
+
+@media (max-width: 640px) {
+  .summary-cards {
+    grid-template-columns: 1fr;
+  }
+}
