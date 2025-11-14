@@ -1,12 +1,8 @@
-import { Plus, Building2, User } from "lucide-react";
+import { Building2, User } from "lucide-react";
 import { useAuth } from "../../../../hooks/useAuth";
 import "./DashboardHeader.css";
 
-interface DashboardHeaderProps {
-  onAddNumber: () => void;
-}
-
-export function DashboardHeader({ onAddNumber }: DashboardHeaderProps) {
+export function DashboardHeader() {
   const { user } = useAuth();
   return (
     <header className="dashboard-header">
@@ -20,10 +16,6 @@ export function DashboardHeader({ onAddNumber }: DashboardHeaderProps) {
           <span>EcoCorp</span>
         </div>
       </div>
-      <button type="button" className="btn-add-number" onClick={onAddNumber}>
-        <Plus size={20} />
-        <span>Adicionar número</span>
-      </button>
     </header>
   );
 }

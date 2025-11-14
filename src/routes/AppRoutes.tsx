@@ -5,16 +5,9 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import { Layout } from "../components/Layout/Layout";
 import Dashboard from "../pages/Dashboard/Dashboard";
+import NumbersManagment from "../pages/NumbersManagment/NumbersManagment";
 
 export default function AppRoutes() {
-  const GestaoDeNumeros = () => {
-    return (
-      <Layout>
-        <h1>Gestão de Números</h1>
-      </Layout>
-    );
-  };
-
   const GestaoDeUsuarios = () => {
     return (
       <Layout>
@@ -73,7 +66,7 @@ export default function AppRoutes() {
           path={paths.gestaoDeNumeros}
           element={
             <ProtectedRoutes>
-              <GestaoDeNumeros />
+              <NumbersManagment />
             </ProtectedRoutes>
           }
         />

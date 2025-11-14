@@ -10,7 +10,7 @@ export default function DashboardPage() {
   return (
     <Layout>
       <div className="dashboard-container">
-        <DashboardHeader onAddNumber={() => console.log("Adicionar número")} />
+        <DashboardHeader />
 
         <SummaryCards
           totalNumbers={45}

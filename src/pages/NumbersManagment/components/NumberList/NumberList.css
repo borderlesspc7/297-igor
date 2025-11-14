@@ -1,0 +1,231 @@
+.number-list-container {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 18px 32px -24px rgba(15, 23, 42, 0.9);
+}
+
+.number-list-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+  background: rgba(17, 24, 39, 0.6);
+}
+
+.select-all-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: none;
+  color: #cbd5f5;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.select-all-button:hover {
+  color: #38bdf8;
+}
+
+.number-list-table {
+  overflow-x: auto;
+}
+
+.number-list-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.number-list-table thead {
+  background: rgba(17, 24, 39, 0.8);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.number-list-table th {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.number-list-table tbody tr {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+  transition: background 0.2s ease;
+}
+
+.number-list-table tbody tr:hover {
+  background: rgba(17, 24, 39, 0.6);
+}
+
+.number-list-table tbody tr.selected {
+  background: rgba(56, 189, 248, 0.1);
+}
+
+.number-list-table td {
+  padding: 1rem 1.5rem;
+  color: #e2e8f0;
+  font-size: 0.9rem;
+}
+
+.checkbox-col {
+  width: 50px;
+}
+
+.checkbox-button {
+  background: transparent;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.checkbox-button:hover {
+  color: #38bdf8;
+}
+
+.number-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.number-cell img {
+  width: 40px;
+  height: 40px;
+  border-radius: 0.75rem;
+  object-fit: cover;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.number-cell strong {
+  display: block;
+  color: #f1f5f9;
+  margin-bottom: 0.25rem;
+}
+
+.number-cell span {
+  display: block;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-badge.heating {
+  background: rgba(234, 179, 8, 0.18);
+  color: #eab308;
+}
+
+.status-badge.paused {
+  background: rgba(248, 113, 113, 0.18);
+  color: #f87171;
+}
+
+.status-badge.ready {
+  background: rgba(16, 185, 129, 0.18);
+  color: #10b981;
+}
+
+.status-badge.banned {
+  background: rgba(239, 68, 68, 0.18);
+  color: #ef4444;
+}
+
+.last-activity {
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.progress-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 120px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 8px;
+  background: rgba(99, 102, 241, 0.15);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #10b981, #34d399);
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.progress-cell span {
+  font-size: 0.85rem;
+  color: #cbd5f5;
+  font-weight: 600;
+  min-width: 40px;
+  text-align: right;
+}
+
+.actions-col {
+  width: 200px;
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.action-buttons button {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  background: rgba(148, 163, 184, 0.1);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 0.75rem;
+  color: #cbd5f5;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.action-buttons button:hover {
+  color: #38bdf8;
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 10px 20px -14px rgba(56, 189, 248, 0.45);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: #94a3b8;
+}
+
+@media (max-width: 1024px) {
+  .number-list-table {
+    font-size: 0.85rem;
+  }
+
+  .number-list-table th,
+  .number-list-table td {
+    padding: 0.75rem 1rem;
+  }
+
+  .number-cell img {
+    width: 32px;
+    height: 32px;
+  }
+}
