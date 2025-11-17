@@ -46,16 +46,16 @@ export default function Login() {
 
         <form onSubmit={handleSubmit} className="login-form">
           {error && (
-            <div className="error-banner">
+            <div className="login-error-banner">
               <AlertCircle size={20} />
               <span>{error}</span>
             </div>
           )}
 
-          <div className="form-group">
+          <div className="login-form-group">
             <label htmlFor="email">E-mail</label>
-            <div className="input-wrapper">
-              <Mail className="input-icon" size={20} />
+            <div className="login-input-wrapper">
+              <Mail className="login-input-icon" size={20} />
               <input
                 id="email"
                 type="email"
@@ -70,10 +70,10 @@ export default function Login() {
             </div>
           </div>
 
-          <div className="form-group">
+          <div className="login-form-group">
             <label htmlFor="password">Senha</label>
-            <div className="input-wrapper">
-              <Lock className="input-icon" size={20} />
+            <div className="login-input-wrapper">
+              <Lock className="login-input-icon" size={20} />
               <input
                 id="password"
                 type="password"
@@ -88,9 +88,13 @@ export default function Login() {
             </div>
           </div>
 
-          <button type="submit" className="btn-primary" disabled={isLoading}>
+          <button
+            type="submit"
+            className="login-btn-primary"
+            disabled={isLoading}
+          >
             {isLoading ? (
-              <span className="loading-spinner"></span>
+              <span className="login-loading-spinner"></span>
             ) : (
               <>
                 <LogIn size={20} />

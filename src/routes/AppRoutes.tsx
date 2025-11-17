@@ -6,16 +6,9 @@ import Register from "../pages/Register/Register";
 import { Layout } from "../components/Layout/Layout";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import NumbersManagment from "../pages/NumbersManagment/NumbersManagment";
+import ClientsManagement from "../pages/ClientsManagment/ClientsManagment";
 
 export default function AppRoutes() {
-  const GestaoDeUsuarios = () => {
-    return (
-      <Layout>
-        <h1>Gestão de Usuarios</h1>
-      </Layout>
-    );
-  };
-
   const PlanoDeAquecimento = () => {
     return (
       <Layout>
@@ -71,10 +64,10 @@ export default function AppRoutes() {
           }
         />
         <Route
-          path={paths.gestaoDeUsuarios}
+          path={paths.gestaoDeClientes}
           element={
             <ProtectedRoutes>
-              <GestaoDeUsuarios />
+              <ClientsManagement />
             </ProtectedRoutes>
           }
         />

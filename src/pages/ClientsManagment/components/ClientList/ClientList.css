@@ -1,0 +1,229 @@
+.client-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.client-list-header {
+  padding: 1rem 1.5rem;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 1rem;
+}
+
+.select-all-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: none;
+  color: #cbd5f5;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.select-all-button:hover {
+  color: #38bdf8;
+}
+
+.client-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+
+.client-card {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: all 0.2s ease;
+}
+
+.client-card:hover {
+  border-color: rgba(16, 185, 129, 0.25);
+  box-shadow: 0 16px 24px -20px rgba(16, 185, 129, 0.45);
+}
+
+.client-card.selected {
+  border-color: rgba(56, 189, 248, 0.4);
+  background: rgba(56, 189, 248, 0.05);
+}
+
+.client-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.client-card-checkbox {
+  flex-shrink: 0;
+}
+
+.checkbox-button {
+  background: transparent;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.checkbox-button:hover {
+  color: #38bdf8;
+}
+
+.client-card-info {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.client-card-name {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.client-card-name strong {
+  display: block;
+  color: #f1f5f9;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.client-card-name span {
+  display: block;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+.status-badge.active {
+  background: rgba(16, 185, 129, 0.18);
+  color: #10b981;
+}
+
+.status-badge.inactive {
+  background: rgba(148, 163, 184, 0.18);
+  color: #94a3b8;
+}
+
+.status-badge.suspended {
+  background: rgba(234, 179, 8, 0.18);
+  color: #eab308;
+}
+
+.status-badge.cancelled {
+  background: rgba(239, 68, 68, 0.18);
+  color: #ef4444;
+}
+
+.client-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: rgba(17, 24, 39, 0.6);
+  border-radius: 0.75rem;
+}
+
+.client-info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #cbd5f5;
+  font-size: 0.9rem;
+}
+
+.client-card-stats {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem;
+  background: rgba(17, 24, 39, 0.6);
+  border-radius: 0.75rem;
+}
+
+.client-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f1f5f9;
+}
+
+.stat-value.active {
+  color: #10b981;
+}
+
+.client-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.client-card-actions button {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  padding: 0.75rem;
+  background: rgba(148, 163, 184, 0.1);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 0.75rem;
+  color: #cbd5f5;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.client-card-actions button:hover {
+  color: #38bdf8;
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 10px 20px -14px rgba(56, 189, 248, 0.45);
+}
+
+.client-card-actions button.danger:hover {
+  color: #f87171;
+  border-color: rgba(248, 113, 113, 0.4);
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+  color: #94a3b8;
+}
+
+@media (max-width: 768px) {
+  .client-list-grid {
+    grid-template-columns: 1fr;
+  }
+}

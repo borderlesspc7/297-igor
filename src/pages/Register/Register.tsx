@@ -65,16 +65,16 @@ export default function Register() {
 
         <form onSubmit={handleSubmit} className="register-form">
           {error && (
-            <div className="error-banner">
+            <div className="register-error-banner">
               <AlertCircle size={20} />
               <span>{error}</span>
             </div>
           )}
 
-          <div className="form-group">
+          <div className="register-form-group">
             <label htmlFor="name">Nome completo</label>
-            <div className="input-wrapper">
-              <User className="input-icon" size={20} />
+            <div className="register-input-wrapper">
+              <User className="register-input-icon" size={20} />
               <input
                 id="name"
                 type="text"
@@ -90,10 +90,10 @@ export default function Register() {
             </div>
           </div>
 
-          <div className="form-group">
+          <div className="register-form-group">
             <label htmlFor="email">E-mail</label>
-            <div className="input-wrapper">
-              <Mail className="input-icon" size={20} />
+            <div className="register-input-wrapper">
+              <Mail className="register-input-icon" size={20} />
               <input
                 id="email"
                 type="email"
@@ -108,10 +108,10 @@ export default function Register() {
             </div>
           </div>
 
-          <div className="form-group">
+          <div className="register-form-group">
             <label htmlFor="password">Senha</label>
-            <div className="input-wrapper">
-              <Lock className="input-icon" size={20} />
+            <div className="register-input-wrapper">
+              <Lock className="register-input-icon" size={20} />
               <input
                 id="password"
                 type="password"
@@ -127,10 +127,10 @@ export default function Register() {
             </div>
           </div>
 
-          <div className="form-group">
+          <div className="register-form-group">
             <label htmlFor="confirmPassword">Confirmar senha</label>
-            <div className="input-wrapper">
-              <Lock className="input-icon" size={20} />
+            <div className="register-input-wrapper">
+              <Lock className="register-input-icon" size={20} />
               <input
                 id="confirmPassword"
                 type="password"
@@ -144,9 +144,13 @@ export default function Register() {
             </div>
           </div>
 
-          <button type="submit" className="btn-primary" disabled={isLoading}>
+          <button
+            type="submit"
+            className="register-btn-primary"
+            disabled={isLoading}
+          >
             {isLoading ? (
-              <span className="loading-spinner"></span>
+              <span className="register-loading-spinner"></span>
             ) : (
               <>
                 <UserPlus size={20} />

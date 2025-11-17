@@ -4,7 +4,7 @@ export const paths = {
   register: "/register",
   dashboard: "/dashboard",
   gestaoDeNumeros: "/gestao-de-numeros",
-  gestaoDeUsuarios: "/gestao-de-usuarios",
+  gestaoDeClientes: "/gestao-de-clientes",
   planoDeAquecimento: "/plano-de-aquecimento",
   interacoes: "/interacoes",
   grupos: "/grupos",

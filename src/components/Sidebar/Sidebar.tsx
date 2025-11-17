@@ -36,8 +36,8 @@ const defaultLinks: SidebarLink[] = [
     icon: PhoneCall,
   },
   {
-    label: "Gestão de usuários",
-    to: paths.gestaoDeUsuarios,
+    label: "Gestão de clientes",
+    to: paths.gestaoDeClientes,
     icon: Users,
   },
   {

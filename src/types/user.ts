@@ -20,6 +20,6 @@ export interface LoginCredentials {
 
 export interface RegisterCredentials extends LoginCredentials {
   name: string;
-  confirmPassword?: string; // Opcional, usado apenas para validação local
+  confirmPassword?: string;
   role?: "admin" | "user";
 }
