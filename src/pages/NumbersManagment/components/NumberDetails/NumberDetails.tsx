@@ -57,7 +57,7 @@ export function NumberDetails({
   const getStatusConfig = (status: string) => {
     const configs: Record<
       string,
-      { label: string; class: string; icon: JSX.Element }
+      { label: string; class: string; icon: React.ReactNode }
     > = {
       aquecendo: {
         label: "Aquecendo",

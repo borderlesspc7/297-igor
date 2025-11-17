@@ -29,7 +29,6 @@ type HeatingPlanModalProps = {
 };
 
 export function HeatingPlanModal({
-  numberId,
   numberName,
   existingPlan,
   onClose,

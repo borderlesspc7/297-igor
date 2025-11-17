@@ -34,7 +34,7 @@ export function InteractionModal({
 }: InteractionModalProps) {
   const [type, setType] = useState<InteractionType>("manual_interaction");
   const [description, setDescription] = useState("");
-  const [metadata, setMetadata] = useState<Record<string, unknown>>({});
+  const [metadata] = useState<Record<string, unknown>>({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
